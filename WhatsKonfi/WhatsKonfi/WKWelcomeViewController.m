@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     [self setupUI];
-    [self maskUserImage];
+    [WKUtilities maskImageWithRoundMask:self.userImage];
 }
 
 - (void) setupUI
@@ -75,12 +75,15 @@
     
     self.nameLabel.text = [[WKSystemCenter defaultCenter] userName];
     
+#warning just for testing until backend connection is established
+    [self.userImage setImage:[UIImage imageNamed:@"manu_rot.jpeg"]];
+    
     [self showLoginTransition];
 }
 
 - (void) showLoginTransition
 {
-    self.dismissalTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(dismissAnimatedFromScreen) userInfo:nil repeats:NO];
+    self.dismissalTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(dismissAnimatedFromScreen) userInfo:nil repeats:NO];
                            
     [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION animations:^{
         self.emailTextfield.alpha = 0;
@@ -101,18 +104,6 @@
             }];
         }
     }];
-}
-
-- (void) maskUserImage
-{
-    UIImage *maskImage = [UIImage imageNamed:@"mask_round"];
-    CALayer *mask = [CALayer layer];
-    mask.contents = (id)[maskImage CGImage];
-    
-    mask.frame = CGRectMake(0,0,self.userImage.frame.size.width,self.userImage.frame.size.height);
-    
-    self.userImage.layer.mask = mask;
-    self.userImage.layer.masksToBounds = YES;
 }
 
 - (void) dismissAnimatedFromScreen

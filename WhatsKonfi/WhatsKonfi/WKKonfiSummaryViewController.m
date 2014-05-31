@@ -7,10 +7,18 @@
 //
 
 #import "WKKonfiSummaryViewController.h"
+#import "WKUtilities.h"
+#import "WKKonfiTableViewCell.h"
 
-@interface WKKonfiSummaryViewController ()
+@interface WKKonfiSummaryViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 @end
+
+static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
 
 @implementation WKKonfiSummaryViewController
 
@@ -18,7 +26,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -26,7 +33,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [WKUtilities maskImageWithRoundMask:self.userImage];
+    
+    self.userNameLabel.font = FONT_CRAYON_DEFAULT;
+    self.userNameLabel.textColor = COLOR_HIGHTLIGHT;
+    
+    UINib *defaultNib = [UINib nibWithNibName:identifier_KonfiTableViewCell bundle: nil];
+    [self.tableView registerNib:defaultNib forCellReuseIdentifier:identifier_KonfiTableViewCell];
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier_KonfiTableViewCell forIndexPath:indexPath];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 135;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
 }
 
 - (void)didReceiveMemoryWarning

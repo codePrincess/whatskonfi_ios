@@ -30,4 +30,16 @@
     return isIpad;
 }
 
++ (void) maskImageWithRoundMask: (UIImageView *) image
+{
+    UIImage *maskImage = [UIImage imageNamed:@"mask_round"];
+    CALayer *mask = [CALayer layer];
+    mask.contents = (id)[maskImage CGImage];
+    
+    mask.frame = CGRectMake(0,0,image.frame.size.width, image.frame.size.height);
+    
+    image.layer.mask = mask;
+    image.layer.masksToBounds = YES;
+}
+
 @end
