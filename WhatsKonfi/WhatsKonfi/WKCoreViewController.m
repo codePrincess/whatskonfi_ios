@@ -28,8 +28,6 @@
     self.splashController.delegate = self;
     
     self.welcomeController = [[WKWelcomeViewController alloc] init];
-    
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -39,7 +37,12 @@
 
 - (void) showUI
 {
+    self.welcomeController.view.alpha = 0;
     [self.view addSubview:self.welcomeController.view];
+    
+    [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION animations:^{
+        self.welcomeController.view.alpha = 1;
+    }];
 }
 
 - (void)didReceiveMemoryWarning

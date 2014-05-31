@@ -11,6 +11,7 @@
 @interface WKSplashController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (assign, nonatomic) NSTimeInterval onScreenDuration;
 @property (weak, nonatomic) NSTimer *onScreenTimer;
 
@@ -54,15 +55,29 @@
         CGRect frame = self.titleLabel.frame;
         frame.origin.x = -self.titleLabel.frame.size.width;
         self.titleLabel.frame = frame;
+        
         self.titleLabel.alpha = 0;
-        self.view.alpha = 0;
         
     } completion:^(BOOL finished) {
-        [self.view removeFromSuperview];
-        [self.onScreenTimer invalidate];
-        self.onScreenTimer = nil;
-        
-        [self.delegate dismissedViewFromController: self];
+        if (finished) {
+            [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION animations:^{
+                self.view.alpha = 0;
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [self.view removeFromSuperview];
+                    [self.onScreenTimer invalidate];
+                    self.onScreenTimer = nil;
+                    
+                    [self.delegate dismissedViewFromController: self];
+                }
+            }];
+        }
+    }];
+    
+    [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION*3 animations:^{
+        CGRect frame = self.logo.frame;
+        frame.origin.x = -self.logo.frame.size.width;
+        self.logo.frame = frame;
     }];
 }
 
