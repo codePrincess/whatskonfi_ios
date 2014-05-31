@@ -24,10 +24,17 @@
 {
     [super viewDidLoad];
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     self.splashController = [[WKSplashController alloc] initWithOnScreenDuration:SPLASH_ON_SCREEN_DURATION];
     self.splashController.delegate = self;
     
     self.welcomeController = [[WKWelcomeViewController alloc] init];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void) viewWillAppear:(BOOL)animated
