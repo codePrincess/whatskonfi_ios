@@ -10,6 +10,10 @@
 
 @interface WKSplashController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (assign, nonatomic) NSTimeInterval onScreenDuration;
+@property (weak, nonatomic) NSTimer *onScreenTimer;
+
 @end
 
 @implementation WKSplashController
@@ -23,11 +27,52 @@
     return self;
 }
 
+- (id) initWithOnScreenDuration: (NSTimeInterval) duration
+{
+    if (self = [super init]) {
+        _onScreenDuration = duration;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setupUI];
 }
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.onScreenTimer = [NSTimer scheduledTimerWithTimeInterval:self.onScreenDuration target:self selector:@selector(dismissAnimatedFromScreen) userInfo:nil repeats:NO];
+}
+
+- (void) dismissAnimatedFromScreen
+{
+    [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION*2 animations:^{
+        CGRect frame = self.titleLabel.frame;
+        frame.origin.x = -self.titleLabel.frame.size.width;
+        self.titleLabel.frame = frame;
+        self.titleLabel.alpha = 0;
+        self.view.alpha = 0;
+        
+    } completion:^(BOOL finished) {
+        [self.view removeFromSuperview];
+        [self.onScreenTimer invalidate];
+        self.onScreenTimer = nil;
+        
+        [self.delegate dismissedViewFromController: self];
+    }];
+}
+
+
+- (void) setupUI
+{
+    self.titleLabel.font = FONT_CRAYON(45);
+    self.titleLabel.textColor = COLOR_HIGHTLIGHT;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

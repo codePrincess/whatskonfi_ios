@@ -13,4 +13,9 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import "configuration.h"
+    #import "font_configuration.h"
+    #import "color_configuration.h"
+    #import "behavior_configuration.h"
 #endif

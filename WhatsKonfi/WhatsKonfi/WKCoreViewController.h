@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WKViewController : UIViewController
+@interface WKCoreViewController : UIViewController
 
 @end

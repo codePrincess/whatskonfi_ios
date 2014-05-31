@@ -10,4 +10,7 @@
 
 @interface WKUtilities : NSObject
 
++ (BOOL) is4inchPhone;
++ (BOOL) isIPad;
+
 @end

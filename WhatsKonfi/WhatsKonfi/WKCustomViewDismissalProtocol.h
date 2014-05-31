@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol WKSplashProtocol <NSObject>
+@protocol WKCustomViewDismissalProtocol <NSObject>
+
+- (void) dismissedViewFromController: (UIViewController *) controller;
 
 @end

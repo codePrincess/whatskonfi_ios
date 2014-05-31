@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WKCustomViewDismissalProtocol.h"
 
 @interface WKWelcomeViewController : UIViewController
+
+@property (nonatomic, weak) id<WKCustomViewDismissalProtocol> delegate;
 
 @end

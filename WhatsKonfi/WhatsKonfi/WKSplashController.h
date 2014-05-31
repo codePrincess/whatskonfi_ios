@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WKCustomViewDismissalProtocol.h"
 
 @interface WKSplashController : UIViewController
+
+@property (weak, nonatomic) id<WKCustomViewDismissalProtocol> delegate;
+
+- (id) initWithOnScreenDuration: (NSTimeInterval) duration;
 
 @end

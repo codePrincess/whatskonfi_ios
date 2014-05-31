@@ -6,24 +6,57 @@
 //  Copyright (c) 2014 BitRoyal. All rights reserved.
 //
 
-#import "WKViewController.h"
+#import "WKCoreViewController.h"
+#import "WKSplashController.h"
+#import "WKWelcomeViewController.h"
 
-@interface WKViewController ()
+@interface WKCoreViewController () <WKCustomViewDismissalProtocol>
+
+@property (nonatomic, strong) WKSplashController *splashController;
+@property (nonatomic, strong) WKWelcomeViewController *welcomeController;
 
 @end
 
-@implementation WKViewController
+@implementation WKCoreViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.splashController = [[WKSplashController alloc] initWithOnScreenDuration:SPLASH_ON_SCREEN_DURATION];
+    self.splashController.delegate = self;
+    
+    self.welcomeController = [[WKWelcomeViewController alloc] init];
+    
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.view addSubview:self.splashController.view];
+}
+
+- (void) showUI
+{
+    [self.view addSubview:self.welcomeController.view];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - <WKCustomViewDismissalProtocol>
+
+- (void)dismissedViewFromController:(UIViewController *)controller
+{
+    
+    
+    if ([controller isKindOfClass:[WKSplashController class]]) {
+        [self showUI];
+    }
 }
 
 @end

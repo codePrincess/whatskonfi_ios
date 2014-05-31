@@ -14,13 +14,24 @@
 		32936F8C193A465B009C9C75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936F8B193A465B009C9C75 /* main.m */; };
 		32936F90193A465B009C9C75 /* WKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936F8F193A465B009C9C75 /* WKAppDelegate.m */; };
 		32936F93193A465B009C9C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32936F91193A465B009C9C75 /* Main.storyboard */; };
-		32936F96193A465B009C9C75 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936F95193A465B009C9C75 /* WKViewController.m */; };
+		32936F96193A465B009C9C75 /* WKCoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936F95193A465B009C9C75 /* WKCoreViewController.m */; };
 		32936F98193A465B009C9C75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32936F97193A465B009C9C75 /* Images.xcassets */; };
 		32936F9F193A465B009C9C75 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F9E193A465B009C9C75 /* XCTest.framework */; };
 		32936FA0193A465B009C9C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F7F193A465B009C9C75 /* Foundation.framework */; };
 		32936FA1193A465B009C9C75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F83193A465B009C9C75 /* UIKit.framework */; };
 		32936FA9193A465B009C9C75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32936FA7193A465B009C9C75 /* InfoPlist.strings */; };
 		32936FAB193A465B009C9C75 /* WhatsKonfiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936FAA193A465B009C9C75 /* WhatsKonfiTests.m */; };
+		32936FB5193A4949009C9C75 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936FB4193A4949009C9C75 /* CoreBluetooth.framework */; };
+		32936FB9193A5067009C9C75 /* WKSplashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936FB7193A5067009C9C75 /* WKSplashController.m */; };
+		32936FBA193A5067009C9C75 /* WKSplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32936FB8193A5067009C9C75 /* WKSplashController.xib */; };
+		32936FBF193A54AF009C9C75 /* chalkboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32936FBE193A54AF009C9C75 /* chalkboard.jpg */; };
+		32936FCD193A5D0E009C9C75 /* WKWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32936FCB193A5D0E009C9C75 /* WKWelcomeViewController.m */; };
+		32936FCE193A5D0E009C9C75 /* WKWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32936FCC193A5D0E009C9C75 /* WKWelcomeViewController.xib */; };
+		32CA0B21193A778700939996 /* WKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CA0B20193A778700939996 /* WKUtilities.m */; };
+		32D590B4193A5E4D00748EC7 /* DK Crayon Crumble.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32D590B3193A5E4D00748EC7 /* DK Crayon Crumble.ttf */; };
+		32D590B9193A5F4500748EC7 /* manu_rot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 32D590B8193A5F4500748EC7 /* manu_rot.jpeg */; };
+		32D590BF193A610D00748EC7 /* mask_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D590BE193A610D00748EC7 /* mask_round.png */; };
+		32D590C2193A63B100748EC7 /* WKSystemCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D590C1193A63B100748EC7 /* WKSystemCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +56,34 @@
 		32936F8E193A465B009C9C75 /* WKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKAppDelegate.h; sourceTree = "<group>"; };
 		32936F8F193A465B009C9C75 /* WKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKAppDelegate.m; sourceTree = "<group>"; };
 		32936F92193A465B009C9C75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32936F94193A465B009C9C75 /* WKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
-		32936F95193A465B009C9C75 /* WKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
+		32936F94193A465B009C9C75 /* WKCoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKCoreViewController.h; sourceTree = "<group>"; };
+		32936F95193A465B009C9C75 /* WKCoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKCoreViewController.m; sourceTree = "<group>"; };
 		32936F97193A465B009C9C75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32936F9D193A465B009C9C75 /* WhatsKonfiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsKonfiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32936F9E193A465B009C9C75 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		32936FA6193A465B009C9C75 /* WhatsKonfiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatsKonfiTests-Info.plist"; sourceTree = "<group>"; };
 		32936FA8193A465B009C9C75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32936FAA193A465B009C9C75 /* WhatsKonfiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatsKonfiTests.m; sourceTree = "<group>"; };
+		32936FB4193A4949009C9C75 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		32936FB6193A5067009C9C75 /* WKSplashController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSplashController.h; sourceTree = "<group>"; };
+		32936FB7193A5067009C9C75 /* WKSplashController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSplashController.m; sourceTree = "<group>"; };
+		32936FB8193A5067009C9C75 /* WKSplashController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKSplashController.xib; sourceTree = "<group>"; };
+		32936FBE193A54AF009C9C75 /* chalkboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalkboard.jpg; sourceTree = "<group>"; };
+		32936FC5193A5564009C9C75 /* configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = configuration.h; sourceTree = "<group>"; };
+		32936FC6193A55A1009C9C75 /* font_configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = font_configuration.h; sourceTree = "<group>"; };
+		32936FC7193A55AB009C9C75 /* color_configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = color_configuration.h; sourceTree = "<group>"; };
+		32936FC8193A58BC009C9C75 /* behavior_configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = behavior_configuration.h; sourceTree = "<group>"; };
+		32936FC9193A5B69009C9C75 /* WKCustomViewDismissalProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKCustomViewDismissalProtocol.h; sourceTree = "<group>"; };
+		32936FCA193A5D0E009C9C75 /* WKWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWelcomeViewController.h; sourceTree = "<group>"; };
+		32936FCB193A5D0E009C9C75 /* WKWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWelcomeViewController.m; sourceTree = "<group>"; };
+		32936FCC193A5D0E009C9C75 /* WKWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKWelcomeViewController.xib; sourceTree = "<group>"; };
+		32CA0B1F193A778700939996 /* WKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKUtilities.h; sourceTree = "<group>"; };
+		32CA0B20193A778700939996 /* WKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKUtilities.m; sourceTree = "<group>"; };
+		32D590B3193A5E4D00748EC7 /* DK Crayon Crumble.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Crayon Crumble.ttf"; sourceTree = "<group>"; };
+		32D590B8193A5F4500748EC7 /* manu_rot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manu_rot.jpeg; sourceTree = "<group>"; };
+		32D590BE193A610D00748EC7 /* mask_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask_round.png; sourceTree = "<group>"; };
+		32D590C0193A63B100748EC7 /* WKSystemCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKSystemCenter.h; sourceTree = "<group>"; };
+		32D590C1193A63B100748EC7 /* WKSystemCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKSystemCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32936FB5193A4949009C9C75 /* CoreBluetooth.framework in Frameworks */,
 				32936F82193A465B009C9C75 /* CoreGraphics.framework in Frameworks */,
 				32936F84193A465B009C9C75 /* UIKit.framework in Frameworks */,
 				32936F80193A465B009C9C75 /* Foundation.framework in Frameworks */,
@@ -101,6 +133,7 @@
 		32936F7E193A465B009C9C75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32936FB4193A4949009C9C75 /* CoreBluetooth.framework */,
 				32936F7F193A465B009C9C75 /* Foundation.framework */,
 				32936F81193A465B009C9C75 /* CoreGraphics.framework */,
 				32936F83193A465B009C9C75 /* UIKit.framework */,
@@ -112,13 +145,10 @@
 		32936F85193A465B009C9C75 /* WhatsKonfi */ = {
 			isa = PBXGroup;
 			children = (
-				32936F8E193A465B009C9C75 /* WKAppDelegate.h */,
-				32936F8F193A465B009C9C75 /* WKAppDelegate.m */,
-				32936F91193A465B009C9C75 /* Main.storyboard */,
-				32936F94193A465B009C9C75 /* WKViewController.h */,
-				32936F95193A465B009C9C75 /* WKViewController.m */,
-				32936F97193A465B009C9C75 /* Images.xcassets */,
-				32936F86193A465B009C9C75 /* Supporting Files */,
+				32936FC4193A5540009C9C75 /* Configuration */,
+				32936FBB193A5081009C9C75 /* Core */,
+				32936FBC193A509C009C9C75 /* Startup&Splash */,
+				32936FBD193A50B3009C9C75 /* Assets&SuppFiles */,
 			);
 			path = WhatsKonfi;
 			sourceTree = "<group>";
@@ -150,6 +180,84 @@
 				32936FA7193A465B009C9C75 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32936FBB193A5081009C9C75 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				32936F8E193A465B009C9C75 /* WKAppDelegate.h */,
+				32936F8F193A465B009C9C75 /* WKAppDelegate.m */,
+				32936F91193A465B009C9C75 /* Main.storyboard */,
+				32936F94193A465B009C9C75 /* WKCoreViewController.h */,
+				32936F95193A465B009C9C75 /* WKCoreViewController.m */,
+				32D590C0193A63B100748EC7 /* WKSystemCenter.h */,
+				32D590C1193A63B100748EC7 /* WKSystemCenter.m */,
+				32CA0B1F193A778700939996 /* WKUtilities.h */,
+				32CA0B20193A778700939996 /* WKUtilities.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		32936FBC193A509C009C9C75 /* Startup&Splash */ = {
+			isa = PBXGroup;
+			children = (
+				32936FB6193A5067009C9C75 /* WKSplashController.h */,
+				32936FB7193A5067009C9C75 /* WKSplashController.m */,
+				32936FB8193A5067009C9C75 /* WKSplashController.xib */,
+				32936FC9193A5B69009C9C75 /* WKCustomViewDismissalProtocol.h */,
+				32936FCA193A5D0E009C9C75 /* WKWelcomeViewController.h */,
+				32936FCB193A5D0E009C9C75 /* WKWelcomeViewController.m */,
+				32936FCC193A5D0E009C9C75 /* WKWelcomeViewController.xib */,
+			);
+			name = "Startup&Splash";
+			sourceTree = "<group>";
+		};
+		32936FBD193A50B3009C9C75 /* Assets&SuppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				32D590B5193A5F2400748EC7 /* masks */,
+				32936FC1193A54E7009C9C75 /* fonts */,
+				32936FC0193A54DF009C9C75 /* background */,
+				32936F97193A465B009C9C75 /* Images.xcassets */,
+				32936F86193A465B009C9C75 /* Supporting Files */,
+			);
+			name = "Assets&SuppFiles";
+			sourceTree = "<group>";
+		};
+		32936FC0193A54DF009C9C75 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				32936FBE193A54AF009C9C75 /* chalkboard.jpg */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		32936FC1193A54E7009C9C75 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				32D590B3193A5E4D00748EC7 /* DK Crayon Crumble.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		32936FC4193A5540009C9C75 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				32936FC5193A5564009C9C75 /* configuration.h */,
+				32936FC6193A55A1009C9C75 /* font_configuration.h */,
+				32936FC7193A55AB009C9C75 /* color_configuration.h */,
+				32936FC8193A58BC009C9C75 /* behavior_configuration.h */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		32D590B5193A5F2400748EC7 /* masks */ = {
+			isa = PBXGroup;
+			children = (
+				32D590BE193A610D00748EC7 /* mask_round.png */,
+				32D590B8193A5F4500748EC7 /* manu_rot.jpeg */,
+			);
+			name = masks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +337,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32936FBF193A54AF009C9C75 /* chalkboard.jpg in Resources */,
+				32936FCE193A5D0E009C9C75 /* WKWelcomeViewController.xib in Resources */,
+				32D590B9193A5F4500748EC7 /* manu_rot.jpeg in Resources */,
+				32936FBA193A5067009C9C75 /* WKSplashController.xib in Resources */,
+				32D590B4193A5E4D00748EC7 /* DK Crayon Crumble.ttf in Resources */,
+				32D590BF193A610D00748EC7 /* mask_round.png in Resources */,
 				32936F98193A465B009C9C75 /* Images.xcassets in Resources */,
 				32936F8A193A465B009C9C75 /* InfoPlist.strings in Resources */,
 				32936F93193A465B009C9C75 /* Main.storyboard in Resources */,
@@ -250,9 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32936F96193A465B009C9C75 /* WKViewController.m in Sources */,
+				32936FB9193A5067009C9C75 /* WKSplashController.m in Sources */,
+				32CA0B21193A778700939996 /* WKUtilities.m in Sources */,
+				32D590C2193A63B100748EC7 /* WKSystemCenter.m in Sources */,
+				32936F96193A465B009C9C75 /* WKCoreViewController.m in Sources */,
 				32936F90193A465B009C9C75 /* WKAppDelegate.m in Sources */,
 				32936F8C193A465B009C9C75 /* main.m in Sources */,
+				32936FCD193A5D0E009C9C75 /* WKWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +575,7 @@
 				32936FB0193A465B009C9C75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32936FB1193A465B009C9C75 /* Build configuration list for PBXNativeTarget "WhatsKonfiTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +584,7 @@
 				32936FB3193A465B009C9C75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

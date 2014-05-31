@@ -1,21 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WKWelcomeViewController">
             <connections>
+                <outlet property="emailTextfield" destination="DaH-EL-NDk" id="dXy-Xk-5eh"/>
+                <outlet property="infoTextTopConstraint" destination="nwp-T5-h5x" id="R8r-M3-DeO"/>
+                <outlet property="nameLabel" destination="yQ2-Zv-uqz" id="ZHR-iG-5xH"/>
+                <outlet property="userImage" destination="mly-3o-jRn" id="r56-4c-boy"/>
+                <outlet property="userImageTopConstraint" destination="NQL-zY-5Na" id="PxE-xV-bQx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeHeader" destination="hpb-Ge-BJx" id="Thj-BO-lkR"/>
+                <outlet property="welcomeInfo" destination="aLt-Zi-DkK" id="RTd-Bq-2jm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8lI-qu-MMz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-user-image" translatesAutoresizingMaskIntoConstraints="NO" id="mly-3o-jRn" userLabel="userimage">
+                    <rect key="frame" x="85" y="61" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="VcA-it-Dxv"/>
+                        <constraint firstAttribute="width" constant="150" id="f87-7p-2AI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQ2-Zv-uqz" userLabel="nameLabel">
+                    <rect key="frame" x="40" y="219" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="XNZ-Hi-11G"/>
+                        <constraint firstAttribute="height" constant="30" id="vUc-gg-IQz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=".net email goes here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaH-EL-NDk" userLabel="emailTextfield">
+                    <rect key="frame" x="40" y="230" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="89v-xg-6Nx"/>
+                        <constraint firstAttribute="width" constant="240" id="Jd5-hT-yEf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Willkommen Kupferwerkler!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-Ge-BJx">
+                    <rect key="frame" x="40" y="290" width="240" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="aLt-Zi-DkK">
+                    <rect key="frame" x="40" y="311" width="240" height="134"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="4Hk-Dp-XK3"/>
+                        <constraint firstAttribute="height" constant="134" id="nn3-3X-mMu"/>
+                    </constraints>
+                    <string key="text">WhatsKonfi gibt dir die Möglichkeit, vorab einzusehen, welche Konfis bei uns im Haus frei sind. Ist einer belegt, so kannst du einsehen, wer da drin ist und vor allem wie lange noch. Viel Spass mit WhatsKonfi und wir freuen uns auf Feedback! Die Manus :)</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aLt-Zi-DkK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="4uL-BI-TkG"/>
+                <constraint firstItem="hpb-Ge-BJx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="CHC-7a-cuh"/>
+                <constraint firstAttribute="trailing" secondItem="aLt-Zi-DkK" secondAttribute="trailing" constant="40" id="I8z-Qz-nNr"/>
+                <constraint firstItem="8lI-qu-MMz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JH9-XR-guK"/>
+                <constraint firstAttribute="trailing" secondItem="8lI-qu-MMz" secondAttribute="trailing" id="K5X-1d-EIr"/>
+                <constraint firstItem="mly-3o-jRn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="61" id="NQL-zY-5Na"/>
+                <constraint firstItem="DaH-EL-NDk" firstAttribute="top" secondItem="mly-3o-jRn" secondAttribute="top" constant="169" id="NvR-Ef-1UN"/>
+                <constraint firstItem="mly-3o-jRn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="85" id="SmB-kR-Aj3"/>
+                <constraint firstItem="8lI-qu-MMz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Suj-2M-Pza"/>
+                <constraint firstItem="yQ2-Zv-uqz" firstAttribute="centerX" secondItem="mly-3o-jRn" secondAttribute="centerX" id="YE2-q6-ynm"/>
+                <constraint firstItem="yQ2-Zv-uqz" firstAttribute="top" secondItem="mly-3o-jRn" secondAttribute="top" constant="158" id="Yo3-z6-MgX"/>
+                <constraint firstItem="aLt-Zi-DkK" firstAttribute="top" secondItem="hpb-Ge-BJx" secondAttribute="bottom" id="jVY-E6-WvA"/>
+                <constraint firstItem="DaH-EL-NDk" firstAttribute="centerX" secondItem="mly-3o-jRn" secondAttribute="centerX" id="jbu-Ea-K2u"/>
+                <constraint firstAttribute="bottom" secondItem="8lI-qu-MMz" secondAttribute="bottom" id="mjt-Qp-n7v"/>
+                <constraint firstItem="hpb-Ge-BJx" firstAttribute="top" secondItem="DaH-EL-NDk" secondAttribute="top" constant="60" id="nwp-T5-h5x"/>
+                <constraint firstAttribute="trailing" secondItem="hpb-Ge-BJx" secondAttribute="trailing" constant="40" id="pDH-19-WbP"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="chalkboard.jpg" width="640" height="960"/>
+        <image name="default-user-image" width="512" height="512"/>
+    </resources>
 </document>

@@ -9,6 +9,12 @@
 #ifndef WhatsKonfi_configuration_h
 #define WhatsKonfi_configuration_h
 
+/*    SERVER CONFIG PRODUCTION    */
+
+
+/*    SERVER CONFIG STAGING       */
+
+
 
 
 #endif
