@@ -9,11 +9,15 @@
 #import "WKCoreViewController.h"
 #import "WKSplashController.h"
 #import "WKWelcomeViewController.h"
+#import "WKKonfiSummaryViewController.h"
+
+
 
 @interface WKCoreViewController () <WKCustomViewDismissalProtocol>
 
 @property (nonatomic, strong) WKSplashController *splashController;
 @property (nonatomic, strong) WKWelcomeViewController *welcomeController;
+@property (nonatomic, strong) WKKonfiSummaryViewController *konfiSummaryController;
 
 @end
 
@@ -30,6 +34,9 @@
     self.splashController.delegate = self;
     
     self.welcomeController = [[WKWelcomeViewController alloc] init];
+    self.welcomeController.delegate = self;
+    
+    self.konfiSummaryController = [[WKKonfiSummaryViewController alloc] init];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle
@@ -42,13 +49,23 @@
     [self.view addSubview:self.splashController.view];
 }
 
-- (void) showUI
+- (void) showWelcomController
 {
     self.welcomeController.view.alpha = 0;
     [self.view addSubview:self.welcomeController.view];
     
     [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION animations:^{
         self.welcomeController.view.alpha = 1;
+    }];
+}
+
+- (void) showKonfiSummaryController
+{
+    self.konfiSummaryController.view.alpha = 0;
+    [self.view addSubview:self.konfiSummaryController.view];
+    
+    [UIView animateWithDuration:DEFAULT_ANIMATION_DURATION animations:^{
+        self.konfiSummaryController.view.alpha = 1;
     }];
 }
 
@@ -62,10 +79,11 @@
 
 - (void)dismissedViewFromController:(UIViewController *)controller
 {
-    
-    
     if ([controller isKindOfClass:[WKSplashController class]]) {
-        [self showUI];
+        [self showWelcomController];
+    }
+    else if ([controller isKindOfClass:[WKWelcomeViewController class]]) {
+        [self showKonfiSummaryController];
     }
 }
 

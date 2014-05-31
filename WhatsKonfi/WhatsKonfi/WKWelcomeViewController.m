@@ -127,6 +127,8 @@
         [self.view removeFromSuperview];
         [self.dismissalTimer invalidate];
         self.dismissalTimer = nil;
+        
+        [self.delegate dismissedViewFromController:self];
     }];
 }
 
