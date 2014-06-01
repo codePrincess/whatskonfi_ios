@@ -22,8 +22,13 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-q9-t49">
-                    <rect key="frame" x="0.0" y="111" width="320" height="457"/>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehp-9s-j6T">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-q9-t49">
+                    <rect key="frame" x="0.0" y="101" width="320" height="467"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -42,7 +47,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manuela Schrenk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfu-bx-a0q">
-                    <rect key="frame" x="20" y="76" width="280" height="21"/>
+                    <rect key="frame" x="20" y="74" width="280" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,11 +60,11 @@
                 <constraint firstItem="NN0-d1-f0i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4a1-7T-y1V"/>
                 <constraint firstItem="iUh-q9-t49" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dt5-Zz-Fjx"/>
                 <constraint firstItem="D55-aS-yK4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="Kht-dV-7Lo"/>
-                <constraint firstItem="iUh-q9-t49" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="111" id="XUe-Cj-4aQ"/>
+                <constraint firstItem="iUh-q9-t49" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="101" id="XUe-Cj-4aQ"/>
                 <constraint firstAttribute="trailing" secondItem="pfu-bx-a0q" secondAttribute="trailing" constant="20" id="cxi-fO-upc"/>
                 <constraint firstAttribute="trailing" secondItem="NN0-d1-f0i" secondAttribute="trailing" id="eGf-LH-xjc"/>
                 <constraint firstItem="D55-aS-yK4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="140" id="h8s-vp-R4f"/>
-                <constraint firstItem="pfu-bx-a0q" firstAttribute="top" secondItem="D55-aS-yK4" secondAttribute="bottom" constant="8" id="i24-6F-4cB"/>
+                <constraint firstItem="pfu-bx-a0q" firstAttribute="top" secondItem="D55-aS-yK4" secondAttribute="bottom" constant="6" id="i24-6F-4cB"/>
                 <constraint firstAttribute="bottom" secondItem="NN0-d1-f0i" secondAttribute="bottom" id="pqG-qF-LeT"/>
                 <constraint firstAttribute="trailing" secondItem="iUh-q9-t49" secondAttribute="trailing" id="q4y-Te-voy"/>
                 <constraint firstAttribute="centerX" secondItem="pfu-bx-a0q" secondAttribute="centerX" id="rAy-6V-mez"/>

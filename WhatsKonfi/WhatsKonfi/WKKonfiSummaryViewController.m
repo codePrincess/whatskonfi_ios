@@ -36,7 +36,7 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
     
     [WKUtilities maskImageWithRoundMask:self.userImage];
     
-    self.userNameLabel.font = FONT_CRAYON_DEFAULT;
+    self.userNameLabel.font = FONT_CRAYON(20);
     self.userNameLabel.textColor = COLOR_HIGHTLIGHT;
     
     UINib *defaultNib = [UINib nibWithNibName:identifier_KonfiTableViewCell bundle: nil];
@@ -53,7 +53,7 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 135;
+    return 90;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

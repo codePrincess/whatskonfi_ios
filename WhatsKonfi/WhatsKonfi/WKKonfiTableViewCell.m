@@ -7,6 +7,8 @@
 //
 
 #import "WKKonfiTableViewCell.h"
+#import "WKUtilities.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface WKKonfiTableViewCell ()
 
@@ -15,9 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *konfiName;
 @property (weak, nonatomic) IBOutlet UILabel *konfiLocation;
 @property (weak, nonatomic) IBOutlet UILabel *konfiPeopleBooking;
-@property (weak, nonatomic) IBOutlet UIView *bookingProgressBar;
 @property (weak, nonatomic) IBOutlet UILabel *konfiPeopleBookingDetails;
 
+@property (assign, nonatomic) CAShapeLayer *contentLayer;
 
 @end
 
@@ -50,7 +52,38 @@
     self.konfiPeopleBookingDetails.textColor = COLOR_HIGHTLIGHT;
     self.konfiPeopleBookingDetails.font = FONT_CRAYON(14);
     self.konfiPeopleBookingDetails.text = @"Anja, Manu, Alex, Klaus, Dirk";
+    
+    [WKUtilities maskImageWithRoundMask:self.konfiImage];
+    
+    [self drawCircleForElapsedTime];
 }
 
+- (void)drawCircleForElapsedTime {
+    //Remove the contentLayer to avoid double drawing to get smooth linings
+    [self.contentLayer removeFromSuperlayer];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [[self makeCircleAtLocation:self.konfiImage.center radius:self.konfiImage.frame.size.width / 2] CGPath];
+    shapeLayer.strokeColor = [[UIColor whiteColor] CGColor];
+    shapeLayer.fillColor = nil;
+    shapeLayer.lineWidth = 3.0f;
+    
+    [self.layer addSublayer:shapeLayer];
+    //Save it locally to avoid dobule drawing earlier in the method
+    self.contentLayer = shapeLayer;
+}
+
+- (UIBezierPath *)makeCircleAtLocation:(CGPoint)location radius:(CGFloat)radius
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path addArcWithCenter:location
+                    radius:radius
+                startAngle:-M_PI_2 //Startpoint mustbe -M_PI_2 to start at the top point, unless this it would start at 25% angle
+                  endAngle:((M_PI *2) * 0.9) - M_PI_2
+                 clockwise:YES];
+    
+    
+    return path;
+}
 
 @end
