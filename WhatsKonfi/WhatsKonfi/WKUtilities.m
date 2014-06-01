@@ -8,6 +8,12 @@
 
 #import "WKUtilities.h"
 
+#define TIME_FORMAT_ISO_DATE @"yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+#define TIME_FORMAT_TIME @"HH:mm"
+
+static NSDateFormatter *isoDateFormatter = nil;
+static NSDateFormatter *niceDateFormatter = nil;
+
 @implementation WKUtilities
 
 + (BOOL) is4inchPhone
@@ -49,6 +55,26 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:content options:kNilOptions error:nil];
     
     return dict[@"konfis"];
+}
+
++ (NSDate *) getDateForDateString: (NSString *) dateString
+{
+    if (!isoDateFormatter) {
+        isoDateFormatter = [[NSDateFormatter alloc] init];
+        [isoDateFormatter setDateFormat:TIME_FORMAT_ISO_DATE];
+    }
+    
+    return [isoDateFormatter dateFromString: dateString];
+}
+
++ (NSString *) getNiceDateStringFromDate: (NSDate *) date
+{
+    if (!niceDateFormatter) {
+        niceDateFormatter = [[NSDateFormatter alloc] init];
+        [niceDateFormatter setDateFormat:TIME_FORMAT_TIME];
+    }
+    
+    return [niceDateFormatter stringFromDate:date];
 }
 
 @end

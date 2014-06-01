@@ -12,6 +12,12 @@
 
 + (BOOL) is4inchPhone;
 + (BOOL) isIPad;
+
 + (void) maskImageWithRoundMask: (UIImageView *) image;
+
 + (NSArray *) retrieveFakeKonfiInfos;
+
++ (NSDate *) getDateForDateString: (NSString *) dateString;
++ (NSString *) getNiceDateStringFromDate: (NSDate *) date;
+
 @end

@@ -63,6 +63,31 @@
         self.konfiPeopleBooking.text = @"FREI";
     }
     
+    NSString *fromDateString = self.data[@"from"];
+    NSString *toDateString = self.data[@"to"];
+    
+    if (fromDateString && toDateString) {
+        NSDate *fromDate = [WKUtilities getDateForDateString:fromDateString];
+        NSDate *toDate = [WKUtilities getDateForDateString:toDateString];
+        
+        NSString *fromToDateText = [[[WKUtilities getNiceDateStringFromDate:fromDate] stringByAppendingString:@" - "] stringByAppendingString:[WKUtilities getNiceDateStringFromDate:toDate]];
+        
+        self.konfiPeopleBooking.text = [[self.konfiPeopleBooking.text stringByAppendingString: @" |  " ] stringByAppendingString: fromToDateText];
+        
+        NSTimeInterval now = [NSDate date].timeIntervalSince1970;
+        NSTimeInterval from = fromDate.timeIntervalSince1970;
+        NSTimeInterval to = toDate.timeIntervalSince1970;
+        
+        if (now > from && now < to) {
+            float elapsedTimeInPercent = (((now - from) * 100) / (to - from)) / 100;
+            [self drawCircleForElapsedTime: elapsedTimeInPercent];
+        }
+        else if (now > from && now > to) {
+            //draw full arc == circle. CPT OBVIOUS! WH00T!
+            [self drawCircleForElapsedTime: 1];
+        }
+    }
+    
     
 }
 
@@ -88,16 +113,16 @@
     self.proximityIndicator.alpha = 0.5;
     
     [WKUtilities maskImageWithRoundMask:self.konfiImage];
-    
-    [self drawCircleForElapsedTime];
 }
 
-- (void)drawCircleForElapsedTime {
+- (void)drawCircleForElapsedTime: (float) elapsedTimeInPercent {
     //Remove the contentLayer to avoid double drawing to get smooth linings
     [self.contentLayer removeFromSuperlayer];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.path = [[self makeCircleAtLocation:self.konfiImage.center radius:self.konfiImage.frame.size.width / 2] CGPath];
+    shapeLayer.path = [[self makeCircleAtLocation:self.konfiImage.center
+                                          radius:self.konfiImage.frame.size.width / 2
+                                 withTimePercent:elapsedTimeInPercent] CGPath ];
     shapeLayer.strokeColor = [[UIColor whiteColor] CGColor];
     shapeLayer.fillColor = nil;
     shapeLayer.lineWidth = 3.0f;
@@ -107,13 +132,13 @@
     self.contentLayer = shapeLayer;
 }
 
-- (UIBezierPath *)makeCircleAtLocation:(CGPoint)location radius:(CGFloat)radius
+- (UIBezierPath *)makeCircleAtLocation:(CGPoint)location radius:(CGFloat)radius withTimePercent:(float) timePercent
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path addArcWithCenter:location
                     radius:radius
                 startAngle:-M_PI_2 //Startpoint mustbe -M_PI_2 to start at the top point, unless this it would start at 25% angle
-                  endAngle:((M_PI *2) * 0.9) - M_PI_2
+                  endAngle:((M_PI *2) * timePercent) - M_PI_2
                  clockwise:YES];
     
     

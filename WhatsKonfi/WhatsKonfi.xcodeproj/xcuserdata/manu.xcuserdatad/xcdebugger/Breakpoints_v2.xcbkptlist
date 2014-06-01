@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsKonfi/WKKonfiSummaryViewController.m"
-            timestampString = "423322991.482676"
+            filePath = "WhatsKonfi/WKKonfiTableViewCell.m"
+            timestampString = "423328213.994994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-refreshView"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-fillWithData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhatsKonfi/WKKonfiTableViewCell.m"
+            timestampString = "423328382.507944"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-fillWithData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
