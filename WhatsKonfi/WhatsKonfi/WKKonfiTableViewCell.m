@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *konfiPeopleBookingDetails;
 @property (weak, nonatomic) IBOutlet UIView *proximityIndicator;
 
+@property (strong, nonatomic) NSDictionary *data;
+
 @property (assign, nonatomic) CAShapeLayer *contentLayer;
 
 @end
@@ -30,8 +32,38 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void) fillWithData: (NSDictionary *) data
+{
+    self.data = data;
+    
+    self.konfiName.text = self.data[@"name"];
+    
+    int bookingCount = [self.data[@"booked"] intValue];
+    if (bookingCount > 0) {
+        NSArray *people = self.data[@"people"];
+        
+        NSString *bookingDetailText = @"";
+        int count = 0;
+        for (NSDictionary *person in people) {
+            bookingDetailText = [bookingDetailText stringByAppendingString:person[@"name"]];
+            if (count < people.count-1) {
+                bookingDetailText = [bookingDetailText stringByAppendingString:@", "];
+            }
+            count++;
+        }
+        self.konfiPeopleBookingDetails.text = bookingDetailText;
+        
+        NSString *bookingText = [NSString stringWithFormat:@"%d Personen", bookingCount];
+        self.konfiPeopleBooking.text = bookingText;
+    }
+    else {
+        self.konfiPeopleBookingDetails.text = @"";
+        self.konfiPeopleBooking.text = @"FREI";
+    }
+    
+    
 }
 
 -(void)awakeFromNib
@@ -40,11 +72,9 @@
     
     self.konfiName.textColor = COLOR_HIGHTLIGHT;
     self.konfiName.font = FONT_CRAYON(26);
-    self.konfiName.text = @"Konfi Glass";
     
     self.konfiLocation.textColor = COLOR_HIGHTLIGHT;
     self.konfiLocation.font = FONT_CRAYON_DEFAULT;
-    self.konfiLocation.text = @"München";
     
     self.konfiPeopleBooking.textColor = COLOR_HIGHTLIGHT;
     self.konfiPeopleBooking.font = FONT_CRAYON(20);
@@ -90,20 +120,6 @@
     return path;
 }
 
-- (void) fadeProximityIndicatorToColor: (UIColor *) color
-{
-    [UIView animateWithDuration:1.2 animations:^{
-        self.proximityIndicator.alpha = 0.3;
-        self.proximityIndicator.backgroundColor = color;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:0.5 animations:^{
-                self.proximityIndicator.alpha = 0.8;
-            }];
-        }
-    }];
-}
-
 - (void) setProximity:(CLProximity)proximity
 {
     switch (proximity)
@@ -133,5 +149,20 @@
         }
     }
 }
+
+- (void) fadeProximityIndicatorToColor: (UIColor *) color
+{
+    [UIView animateWithDuration:1.2 animations:^{
+        self.proximityIndicator.alpha = 0.3;
+        self.proximityIndicator.backgroundColor = color;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.5 animations:^{
+                self.proximityIndicator.alpha = 0.8;
+            }];
+        }
+    }];
+}
+
 
 @end

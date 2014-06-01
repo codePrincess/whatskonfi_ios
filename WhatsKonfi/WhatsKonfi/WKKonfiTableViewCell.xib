@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view alpha="0.80000000000000004" contentMode="scaleToFill" id="eh7-7a-8Bv" userLabel="proximityIndicator">
-                        <rect key="frame" x="0.0" y="0.0" width="5" height="90"/>
+                        <rect key="frame" x="0.0" y="0.0" width="2" height="90"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

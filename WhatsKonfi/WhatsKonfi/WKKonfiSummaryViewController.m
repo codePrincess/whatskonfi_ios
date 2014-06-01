@@ -73,6 +73,8 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
     
     NSDictionary *konfiInfo = self.konfiData[indexPath.row];
     
+    [cell fillWithData:konfiInfo];
+    
     NSDictionary *konfiBeaconInfo = konfiInfo[@"beacon_info"];
     for (ESTBeacon *beacon in [WKBeaconCenter defaultCenter].myBeacons) {
         if ([[beacon.proximityUUID UUIDString] isEqualToString: konfiBeaconInfo[@"uuid"]] &&
