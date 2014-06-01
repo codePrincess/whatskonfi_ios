@@ -1,0 +1,84 @@
+{
+    "konfis" : [ 
+		{
+			"name" : "Konfi Gross",
+            "beacon_info" : {
+                "uuid" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+                "major" : "7139",
+                "minor" : "23636"
+            },
+			"location" : "München",
+			"capacity" : "12",
+			"booked"   : "3",
+			"people"   : [
+				{
+					"name" : "Klaus Busse",
+					"imagurl" : "http....",
+					"email" : "kbus@kupferwerk.net"
+				},
+				{
+					"name" : "Anja Morawietz",
+					"imagurl" : "http....",
+					"email" : "amor@kupferwerk.net"
+				},
+				{
+					"name" : "Manuel Sedlmeier",
+					"imagurl" : "http....",
+					"email" : "msed@kupferwerk.net"
+				}
+			],
+			"from"	   : "2014-06-04T13:15+02:00",
+			"to"	   : "2014-06-04T16:15+02:00",
+			"owner"    : {
+					"name" : "Anja Morawietz",
+					"imagurl" : "http....",
+					"email" : "amor@kupferwerk.net"
+				},
+			"accessory" : "TV, AppleTV, Beamer, Backblick, weitläufige Whiteboards, Stifte"
+		},
+		{
+			"name" : "Konfi Glass",
+            "beacon_info" : {
+                "uuid" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+                "major" : "723",
+                "minor" : "2066"
+            },
+			"location" : "München",
+			"capacity" : "4",
+			"booked"   : "2",
+			"people"   : [
+				{
+					"name" : "Dirk Heider",
+					"imagurl" : "http....",
+					"email" : "dhei@kupferwerk.net"
+				},
+				{
+					"name" : "Reginald Rink",
+					"imagurl" : "http....",
+					"email" : "rrin@kupferwerk.net"
+				}
+			],
+			"from"	   : "2014-06-03T10:15+02:00",
+			"to"	   : "2014-06-03T12:15+02:00",
+			"owner"    : {
+					"name" : "Dirk Heider",
+					"imagurl" : "http....",
+					"email" : "dhei@kupferwerk.net"
+				},
+			"accessory" : "Whiteboard, Stifte,gemuetliche Bestuhlung, 270° nahezu Allroundblick"
+		},
+		{
+			"name" : "Konfi Keller",
+            "beacon_info" : {
+                "uuid" : "",
+                "major" : "",
+                "minor" : ""
+            },
+			"location" : "München",
+			"capacity" : "6",
+			"booked"   : "0",
+			"accessory" : "Whiteboard, Stifte,gemuetliche Bestuhlung, 270° nahezu Allroundblick"
+		}
+
+    ]
+}

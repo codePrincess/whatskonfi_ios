@@ -42,4 +42,13 @@
     image.layer.masksToBounds = YES;
 }
 
++ (NSArray *) retrieveFakeKonfiInfos
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"konfi_infos" ofType:@"json"];
+    NSData *content = [[NSData alloc] initWithContentsOfFile:filePath];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:content options:kNilOptions error:nil];
+    
+    return dict[@"konfis"];
+}
+
 @end

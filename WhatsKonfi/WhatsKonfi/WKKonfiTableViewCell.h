@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface WKKonfiTableViewCell : UITableViewCell
 
+- (void) setProximity: (CLProximity) proximity;
 @end

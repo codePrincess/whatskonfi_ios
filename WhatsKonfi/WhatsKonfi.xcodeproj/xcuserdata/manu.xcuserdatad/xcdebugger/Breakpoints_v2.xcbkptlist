@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhatsKonfi/WKKonfiSummaryViewController.m"
-            timestampString = "423268339.254209"
+            timestampString = "423322991.482676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-refreshView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *konfiLocation;
 @property (weak, nonatomic) IBOutlet UILabel *konfiPeopleBooking;
 @property (weak, nonatomic) IBOutlet UILabel *konfiPeopleBookingDetails;
+@property (weak, nonatomic) IBOutlet UIView *proximityIndicator;
 
 @property (assign, nonatomic) CAShapeLayer *contentLayer;
 
@@ -53,6 +54,9 @@
     self.konfiPeopleBookingDetails.font = FONT_CRAYON(14);
     self.konfiPeopleBookingDetails.text = @"Anja, Manu, Alex, Klaus, Dirk";
     
+    self.proximityIndicator.backgroundColor = [UIColor clearColor];
+    self.proximityIndicator.alpha = 0.5;
+    
     [WKUtilities maskImageWithRoundMask:self.konfiImage];
     
     [self drawCircleForElapsedTime];
@@ -84,6 +88,50 @@
     
     
     return path;
+}
+
+- (void) fadeProximityIndicatorToColor: (UIColor *) color
+{
+    [UIView animateWithDuration:1.2 animations:^{
+        self.proximityIndicator.alpha = 0.3;
+        self.proximityIndicator.backgroundColor = color;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.5 animations:^{
+                self.proximityIndicator.alpha = 0.8;
+            }];
+        }
+    }];
+}
+
+- (void) setProximity:(CLProximity)proximity
+{
+    switch (proximity)
+    {
+        case CLProximityUnknown:
+        {
+            [self fadeProximityIndicatorToColor:[UIColor lightGrayColor]];
+            break;
+        }
+        case CLProximityImmediate:
+        {
+            [self fadeProximityIndicatorToColor: [UIColor greenColor]];
+            break;
+        }
+        case CLProximityNear:
+        {
+            [self fadeProximityIndicatorToColor: [UIColor orangeColor]];
+            break;
+        }
+        case CLProximityFar:
+        {
+            [self fadeProximityIndicatorToColor: [UIColor redColor]];
+            break;
+        }
+        default:
+        {
+        }
+    }
 }
 
 @end
