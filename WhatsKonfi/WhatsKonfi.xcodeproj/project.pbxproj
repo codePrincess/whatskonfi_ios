@@ -14,9 +14,9 @@
 		322B722B193A91CA0020BE15 /* konfi_glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 322B722A193A91CA0020BE15 /* konfi_glass.png */; };
 		322B7236193B4D470020BE15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322B7235193B4D470020BE15 /* CoreLocation.framework */; };
 		322B7238193B4D500020BE15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322B7237193B4D500020BE15 /* SystemConfiguration.framework */; };
-		322B723F193B4DDE0020BE15 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322B723E193B4DDE0020BE15 /* libEstimoteSDK.a */; };
 		322B7244193B500C0020BE15 /* WKBeaconCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 322B7243193B500C0020BE15 /* WKBeaconCenter.m */; };
 		322B7248193B5B5B0020BE15 /* konfi_infos.json in Resources */ = {isa = PBXBuildFile; fileRef = 322B7247193B5B5B0020BE15 /* konfi_infos.json */; };
+		328A33C5198703BB0014362F /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A33C4198703BB0014362F /* libEstimoteSDK.a */; };
 		32936F80193A465B009C9C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F7F193A465B009C9C75 /* Foundation.framework */; };
 		32936F82193A465B009C9C75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F81193A465B009C9C75 /* CoreGraphics.framework */; };
 		32936F84193A465B009C9C75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F83193A465B009C9C75 /* UIKit.framework */; };
@@ -64,15 +64,18 @@
 		322B722A193A91CA0020BE15 /* konfi_glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = konfi_glass.png; sourceTree = "<group>"; };
 		322B7235193B4D470020BE15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		322B7237193B4D500020BE15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		322B7239193B4DDE0020BE15 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeacon.h; path = WhatsKonfi/3rdParty/EstimoteSDK/ESTBeacon.h; sourceTree = "<group>"; };
-		322B723A193B4DDE0020BE15 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconDefinitions.h; path = WhatsKonfi/3rdParty/EstimoteSDK/ESTBeaconDefinitions.h; sourceTree = "<group>"; };
-		322B723B193B4DDE0020BE15 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconManager.h; path = WhatsKonfi/3rdParty/EstimoteSDK/ESTBeaconManager.h; sourceTree = "<group>"; };
-		322B723C193B4DDE0020BE15 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconRegion.h; path = WhatsKonfi/3rdParty/EstimoteSDK/ESTBeaconRegion.h; sourceTree = "<group>"; };
-		322B723D193B4DDE0020BE15 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESTBeaconUpdateInfo.h; path = WhatsKonfi/3rdParty/EstimoteSDK/ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
-		322B723E193B4DDE0020BE15 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = WhatsKonfi/3rdParty/EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 		322B7242193B500C0020BE15 /* WKBeaconCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKBeaconCenter.h; sourceTree = "<group>"; };
 		322B7243193B500C0020BE15 /* WKBeaconCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKBeaconCenter.m; sourceTree = "<group>"; };
 		322B7247193B5B5B0020BE15 /* konfi_infos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = konfi_infos.json; sourceTree = "<group>"; };
+		3257B15219445DDD00F7114F /* KonfiPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = KonfiPlayground.playground; sourceTree = "<group>"; };
+		328A33BD198703BB0014362F /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		328A33BE198703BB0014362F /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		328A33BF198703BB0014362F /* ESTBeaconFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareInfoVO.h; sourceTree = "<group>"; };
+		328A33C0198703BB0014362F /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		328A33C1198703BB0014362F /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		328A33C2198703BB0014362F /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		328A33C3198703BB0014362F /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		328A33C4198703BB0014362F /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
 		32936F7C193A465B009C9C75 /* WhatsKonfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsKonfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32936F7F193A465B009C9C75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32936F81193A465B009C9C75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,7 +128,7 @@
 				32936F82193A465B009C9C75 /* CoreGraphics.framework in Frameworks */,
 				32936F84193A465B009C9C75 /* UIKit.framework in Frameworks */,
 				32936F80193A465B009C9C75 /* Foundation.framework in Frameworks */,
-				322B723F193B4DDE0020BE15 /* libEstimoteSDK.a in Frameworks */,
+				328A33C5198703BB0014362F /* libEstimoteSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,12 +170,14 @@
 		322B722D193B4D110020BE15 /* Estimote */ = {
 			isa = PBXGroup;
 			children = (
-				322B7239193B4DDE0020BE15 /* ESTBeacon.h */,
-				322B723A193B4DDE0020BE15 /* ESTBeaconDefinitions.h */,
-				322B723B193B4DDE0020BE15 /* ESTBeaconManager.h */,
-				322B723C193B4DDE0020BE15 /* ESTBeaconRegion.h */,
-				322B723D193B4DDE0020BE15 /* ESTBeaconUpdateInfo.h */,
-				322B723E193B4DDE0020BE15 /* libEstimoteSDK.a */,
+				328A33BD198703BB0014362F /* ESTBeacon.h */,
+				328A33BE198703BB0014362F /* ESTBeaconDefinitions.h */,
+				328A33BF198703BB0014362F /* ESTBeaconFirmwareInfoVO.h */,
+				328A33C0198703BB0014362F /* ESTBeaconFirmwareVO.h */,
+				328A33C1198703BB0014362F /* ESTBeaconManager.h */,
+				328A33C2198703BB0014362F /* ESTBeaconRegion.h */,
+				328A33C3198703BB0014362F /* ESTBeaconVO.h */,
+				328A33C4198703BB0014362F /* libEstimoteSDK.a */,
 			);
 			name = Estimote;
 			sourceTree = "<group>";
@@ -192,6 +197,14 @@
 				322B7243193B500C0020BE15 /* WKBeaconCenter.m */,
 			);
 			name = Beacons;
+			sourceTree = "<group>";
+		};
+		3257B15119445DB800F7114F /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				3257B15219445DDD00F7114F /* KonfiPlayground.playground */,
+			);
+			name = swift;
 			sourceTree = "<group>";
 		};
 		32936F73193A465B009C9C75 = {
@@ -231,6 +244,7 @@
 		32936F85193A465B009C9C75 /* WhatsKonfi */ = {
 			isa = PBXGroup;
 			children = (
+				3257B15119445DB800F7114F /* swift */,
 				32936FC4193A5540009C9C75 /* Configuration */,
 				32936FBB193A5081009C9C75 /* Core */,
 				322B7240193B4FE90020BE15 /* Communication */,
