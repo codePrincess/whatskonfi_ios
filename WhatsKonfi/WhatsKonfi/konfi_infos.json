@@ -14,17 +14,17 @@
 			"people"   : [
 				{
 					"name" : "Klaus Busse",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "kbus@kupferwerk.net"
 				},
 				{
 					"name" : "Anja Morawietz",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "amor@kupferwerk.net"
 				},
 				{
 					"name" : "Manuel Sedlmeier",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "msed@kupferwerk.net"
 				}
 			],
@@ -32,7 +32,7 @@
 			"to"	   : "2014-07-29T2:00:00+02:00",
 			"owner"    : {
 					"name" : "Anja Morawietz",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "amor@kupferwerk.net"
 				},
 			"accessory" : "TV, AppleTV, Beamer, Backblick, weitläufige Whiteboards, Stifte"
@@ -51,12 +51,12 @@
 			"people"   : [
 				{
 					"name" : "Dirk Heider",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "dhei@kupferwerk.net"
 				},
 				{
 					"name" : "Reginald Rink",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "rrin@kupferwerk.net"
 				}
 			],
@@ -64,7 +64,7 @@
 			"to"	   : "2014-07-29T03:30:00+02:00",
 			"owner"    : {
 					"name" : "Dirk Heider",
-					"imagurl" : "http....",
+					"imageurl" : "http....",
 					"email" : "dhei@kupferwerk.net"
 				},
 			"accessory" : "Whiteboard, Stifte,gemuetliche Bestuhlung, 270° nahezu Allroundblick"

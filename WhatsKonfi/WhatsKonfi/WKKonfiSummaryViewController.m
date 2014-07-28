@@ -11,6 +11,7 @@
 #import "WKKonfiTableViewCell.h"
 #import "WKBeaconCenter.h"
 #import "ESTBeacon.h"
+#import "WKKonfiDetailViewController.h"
 
 
 @interface WKKonfiSummaryViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -21,6 +22,8 @@
 
 @property (strong, nonatomic) NSArray *konfiData;
 @property (weak, nonatomic) NSTimer *updateTimer;
+
+@property (strong, nonatomic) WKKonfiDetailViewController *detailVC;
 
 @end
 
@@ -43,7 +46,7 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
     [WKUtilities maskImageWithRoundMask:self.userImage];
     
     self.userNameLabel.font = FONT_CRAYON(20);
-    self.userNameLabel.textColor = COLOR_HIGHTLIGHT;
+    self.userNameLabel.textColor = COLOR_HIGHLIGHT;
     
     UINib *defaultNib = [UINib nibWithNibName:identifier_KonfiTableViewCell bundle: nil];
     [self.tableView registerNib:defaultNib forCellReuseIdentifier:identifier_KonfiTableViewCell];
@@ -95,6 +98,18 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.konfiData.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *konfiInfo = self.konfiData[indexPath.row];
+    
+    self.detailVC = [[WKKonfiDetailViewController alloc] init];
+    [[NSBundle mainBundle] loadNibNamed:@"WKKonfiDetailViewController" owner:self.detailVC options:nil];
+    
+    [self.detailVC setupWithDict: konfiInfo];
+    
+    [self.navigationController pushViewController:self.detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

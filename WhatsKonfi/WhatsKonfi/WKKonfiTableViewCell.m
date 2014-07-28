@@ -95,17 +95,17 @@
 {
     self.contentBackgroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     
-    self.konfiName.textColor = COLOR_HIGHTLIGHT;
+    self.konfiName.textColor = COLOR_HIGHLIGHT;
     self.konfiName.font = FONT_CRAYON(26);
     
-    self.konfiLocation.textColor = COLOR_HIGHTLIGHT;
+    self.konfiLocation.textColor = COLOR_HIGHLIGHT;
     self.konfiLocation.font = FONT_CRAYON_DEFAULT;
     
-    self.konfiPeopleBooking.textColor = COLOR_HIGHTLIGHT;
+    self.konfiPeopleBooking.textColor = COLOR_HIGHLIGHT;
     self.konfiPeopleBooking.font = FONT_CRAYON(20);
     self.konfiPeopleBooking.text = @"5 Personen  |  13:15 - 16:30";
     
-    self.konfiPeopleBookingDetails.textColor = COLOR_HIGHTLIGHT;
+    self.konfiPeopleBookingDetails.textColor = COLOR_HIGHLIGHT;
     self.konfiPeopleBookingDetails.font = FONT_CRAYON(14);
     self.konfiPeopleBookingDetails.text = @"Anja, Manu, Alex, Klaus, Dirk";
     

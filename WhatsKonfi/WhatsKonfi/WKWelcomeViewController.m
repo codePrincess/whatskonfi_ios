@@ -56,12 +56,12 @@
     }
     
     self.nameLabel.font = FONT_CRAYON(30);
-    self.nameLabel.textColor = COLOR_HIGHTLIGHT;
+    self.nameLabel.textColor = COLOR_HIGHLIGHT;
     
     self.welcomeHeader.font = FONT_CRAYON(25);
-    self.welcomeHeader.textColor = COLOR_HIGHTLIGHT;
+    self.welcomeHeader.textColor = COLOR_HIGHLIGHT;
     self.welcomeInfo.font = FONT_CRAYON_DEFAULT;
-    self.welcomeInfo.textColor = COLOR_HIGHTLIGHT;
+    self.welcomeInfo.textColor = COLOR_HIGHLIGHT;
     
     if ([WKUtilities is4inchPhone]) {
         self.userImageTopConstraint.constant = 100;

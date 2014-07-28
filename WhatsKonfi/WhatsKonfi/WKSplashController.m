@@ -85,7 +85,7 @@
 - (void) setupUI
 {
     self.titleLabel.font = FONT_CRAYON(45);
-    self.titleLabel.textColor = COLOR_HIGHTLIGHT;
+    self.titleLabel.textColor = COLOR_HIGHLIGHT;
 }
 
 

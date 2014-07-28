@@ -19,6 +19,8 @@
 		328A33C5198703BB0014362F /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A33C4198703BB0014362F /* libEstimoteSDK.a */; };
 		328A33C919870C040014362F /* WKKonfiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328A33C719870C040014362F /* WKKonfiDetailViewController.m */; };
 		328A33CA19870C040014362F /* WKKonfiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328A33C819870C040014362F /* WKKonfiDetailViewController.xib */; };
+		328A33CE1987138C0014362F /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 328A33CC1987138C0014362F /* arrow_left.png */; };
+		328A33CF1987138C0014362F /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 328A33CD1987138C0014362F /* arrow_left@2x.png */; };
 		32936F80193A465B009C9C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F7F193A465B009C9C75 /* Foundation.framework */; };
 		32936F82193A465B009C9C75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F81193A465B009C9C75 /* CoreGraphics.framework */; };
 		32936F84193A465B009C9C75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F83193A465B009C9C75 /* UIKit.framework */; };
@@ -81,6 +83,8 @@
 		328A33C619870C040014362F /* WKKonfiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKKonfiDetailViewController.h; sourceTree = "<group>"; };
 		328A33C719870C040014362F /* WKKonfiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKKonfiDetailViewController.m; sourceTree = "<group>"; };
 		328A33C819870C040014362F /* WKKonfiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKKonfiDetailViewController.xib; sourceTree = "<group>"; };
+		328A33CC1987138C0014362F /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		328A33CD1987138C0014362F /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		32936F7C193A465B009C9C75 /* WhatsKonfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsKonfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32936F7F193A465B009C9C75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32936F81193A465B009C9C75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -334,9 +338,9 @@
 			isa = PBXGroup;
 			children = (
 				32D590B5193A5F2400748EC7 /* masks */,
+				32936F97193A465B009C9C75 /* Images.xcassets */,
 				32936FC1193A54E7009C9C75 /* fonts */,
 				32936FC0193A54DF009C9C75 /* background */,
-				32936F97193A465B009C9C75 /* Images.xcassets */,
 				32936F86193A465B009C9C75 /* Supporting Files */,
 			);
 			name = "Assets&SuppFiles";
@@ -374,6 +378,8 @@
 			isa = PBXGroup;
 			children = (
 				32D590BE193A610D00748EC7 /* mask_round.png */,
+				328A33CC1987138C0014362F /* arrow_left.png */,
+				328A33CD1987138C0014362F /* arrow_left@2x.png */,
 				32D590B8193A5F4500748EC7 /* manu_rot.jpeg */,
 			);
 			name = masks;
@@ -456,8 +462,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328A33CE1987138C0014362F /* arrow_left.png in Resources */,
 				322B7229193A8C240020BE15 /* WKKonfiTableViewCell.xib in Resources */,
 				328A33CA19870C040014362F /* WKKonfiDetailViewController.xib in Resources */,
+				328A33CF1987138C0014362F /* arrow_left@2x.png in Resources */,
 				322B7224193A867E0020BE15 /* WKKonfiSummaryViewController.xib in Resources */,
 				32936FBF193A54AF009C9C75 /* chalkboard.jpg in Resources */,
 				32936FCE193A5D0E009C9C75 /* WKWelcomeViewController.xib in Resources */,

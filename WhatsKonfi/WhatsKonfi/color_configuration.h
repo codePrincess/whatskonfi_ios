@@ -9,6 +9,6 @@
 #ifndef WhatsKonfi_color_configuration_h
 #define WhatsKonfi_color_configuration_h
 
-#define COLOR_HIGHTLIGHT [UIColor whiteColor]
+#define COLOR_HIGHLIGHT [UIColor whiteColor]
 
 #endif

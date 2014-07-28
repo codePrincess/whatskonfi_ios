@@ -10,4 +10,6 @@
 
 @interface WKKonfiDetailViewController : UIViewController
 
+- (void) setupWithDict: (NSDictionary *) dict;
+
 @end
