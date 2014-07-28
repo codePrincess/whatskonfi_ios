@@ -17,6 +17,8 @@
 		322B7244193B500C0020BE15 /* WKBeaconCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 322B7243193B500C0020BE15 /* WKBeaconCenter.m */; };
 		322B7248193B5B5B0020BE15 /* konfi_infos.json in Resources */ = {isa = PBXBuildFile; fileRef = 322B7247193B5B5B0020BE15 /* konfi_infos.json */; };
 		328A33C5198703BB0014362F /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 328A33C4198703BB0014362F /* libEstimoteSDK.a */; };
+		328A33C919870C040014362F /* WKKonfiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328A33C719870C040014362F /* WKKonfiDetailViewController.m */; };
+		328A33CA19870C040014362F /* WKKonfiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 328A33C819870C040014362F /* WKKonfiDetailViewController.xib */; };
 		32936F80193A465B009C9C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F7F193A465B009C9C75 /* Foundation.framework */; };
 		32936F82193A465B009C9C75 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F81193A465B009C9C75 /* CoreGraphics.framework */; };
 		32936F84193A465B009C9C75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32936F83193A465B009C9C75 /* UIKit.framework */; };
@@ -76,6 +78,9 @@
 		328A33C2198703BB0014362F /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
 		328A33C3198703BB0014362F /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
 		328A33C4198703BB0014362F /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		328A33C619870C040014362F /* WKKonfiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKKonfiDetailViewController.h; sourceTree = "<group>"; };
+		328A33C719870C040014362F /* WKKonfiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKKonfiDetailViewController.m; sourceTree = "<group>"; };
+		328A33C819870C040014362F /* WKKonfiDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKKonfiDetailViewController.xib; sourceTree = "<group>"; };
 		32936F7C193A465B009C9C75 /* WhatsKonfi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsKonfi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32936F7F193A465B009C9C75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32936F81193A465B009C9C75 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,7 +159,9 @@
 				322B7225193A8C240020BE15 /* WKKonfiTableViewCell.h */,
 				322B7226193A8C240020BE15 /* WKKonfiTableViewCell.m */,
 				322B7227193A8C240020BE15 /* WKKonfiTableViewCell.xib */,
-				322B7247193B5B5B0020BE15 /* konfi_infos.json */,
+				328A33C619870C040014362F /* WKKonfiDetailViewController.h */,
+				328A33C719870C040014362F /* WKKonfiDetailViewController.m */,
+				328A33C819870C040014362F /* WKKonfiDetailViewController.xib */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -207,6 +214,14 @@
 			name = swift;
 			sourceTree = "<group>";
 		};
+		328A33CB19870C130014362F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				322B7247193B5B5B0020BE15 /* konfi_infos.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		32936F73193A465B009C9C75 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +265,7 @@
 				322B7240193B4FE90020BE15 /* Communication */,
 				32936FBC193A509C009C9C75 /* Startup&Splash */,
 				322B721F193A865D0020BE15 /* Content */,
+				328A33CB19870C130014362F /* Data */,
 				32936FBD193A50B3009C9C75 /* Assets&SuppFiles */,
 			);
 			path = WhatsKonfi;
@@ -441,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322B7229193A8C240020BE15 /* WKKonfiTableViewCell.xib in Resources */,
+				328A33CA19870C040014362F /* WKKonfiDetailViewController.xib in Resources */,
 				322B7224193A867E0020BE15 /* WKKonfiSummaryViewController.xib in Resources */,
 				32936FBF193A54AF009C9C75 /* chalkboard.jpg in Resources */,
 				32936FCE193A5D0E009C9C75 /* WKWelcomeViewController.xib in Resources */,
@@ -481,6 +498,7 @@
 				32936F8C193A465B009C9C75 /* main.m in Sources */,
 				32936FCD193A5D0E009C9C75 /* WKWelcomeViewController.m in Sources */,
 				322B7223193A867E0020BE15 /* WKKonfiSummaryViewController.m in Sources */,
+				328A33C919870C040014362F /* WKKonfiDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

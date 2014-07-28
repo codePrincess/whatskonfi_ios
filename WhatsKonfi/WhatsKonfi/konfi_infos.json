@@ -4,8 +4,9 @@
 			"name" : "Konfi Gross",
             "beacon_info" : {
                 "uuid" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
-                "major" : "7139",
-                "minor" : "23636"
+                "major" : "44932",
+                "minor" : "55033",
+                "color" : "Blueberry Pie"
             },
 			"location" : "München",
 			"capacity" : "12",
@@ -27,8 +28,8 @@
 					"email" : "msed@kupferwerk.net"
 				}
 			],
-			"from"	   : "2014-06-01T17:00:00+02:00",
-			"to"	   : "2014-06-01T19:00:00+02:00",
+			"from"	   : "2014-07-29T00:10:00+02:00",
+			"to"	   : "2014-07-29T2:00:00+02:00",
 			"owner"    : {
 					"name" : "Anja Morawietz",
 					"imagurl" : "http....",
@@ -40,8 +41,9 @@
 			"name" : "Konfi Glass",
             "beacon_info" : {
                 "uuid" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
-                "major" : "723",
-                "minor" : "2066"
+                "major" : "36646",
+                "minor" : "38174",
+                "color" : "Cocktail Mint"
             },
 			"location" : "München",
 			"capacity" : "4",
@@ -58,8 +60,8 @@
 					"email" : "rrin@kupferwerk.net"
 				}
 			],
-			"from"	   : "2014-06-01T16:15:00+02:00",
-			"to"	   : "2014-06-01T18:30:00+02:00",
+			"from"	   : "2014-07-29T00:30:00+02:00",
+			"to"	   : "2014-07-29T03:30:00+02:00",
 			"owner"    : {
 					"name" : "Dirk Heider",
 					"imagurl" : "http....",
@@ -70,9 +72,10 @@
 		{
 			"name" : "Konfi Keller",
             "beacon_info" : {
-                "uuid" : "",
-                "major" : "",
-                "minor" : ""
+                "uuid" : "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+                "major" : "6758",
+                "minor" : "44205",
+                "color" : "Icy Marshmallow"
             },
 			"location" : "München",
 			"capacity" : "6",
