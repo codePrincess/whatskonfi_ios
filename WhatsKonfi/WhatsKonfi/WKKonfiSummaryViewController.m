@@ -109,7 +109,7 @@ static NSString *identifier_KonfiTableViewCell = @"WKKonfiTableViewCell";
     
     [self.detailVC setupWithDict: konfiInfo];
     
-    [self.navigationController pushViewController:self.detailVC animated:YES];
+    [self.view addSubview:self.detailVC.view];
 }
 
 - (void)didReceiveMemoryWarning

@@ -29,11 +29,6 @@
 - (void) setupWithDict: (NSDictionary *) dict
 {
     _infoDict = dict;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
     
     self.titleLabel.font = FONT_CRAYON(20);
     self.locationLabel.font = FONT_CRAYON(12);
@@ -44,9 +39,14 @@
     self.accessoryLabel.text = [self.infoDict objectForKey:@"accessory"];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
 - (IBAction)backTapped:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:nil];    
+    [self.view removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

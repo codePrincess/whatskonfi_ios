@@ -10,7 +10,7 @@
 #import "WKSplashController.h"
 #import "WKWelcomeViewController.h"
 #import "WKKonfiSummaryViewController.h"
-
+#import "WKAppDelegate.h"
 
 
 @interface WKCoreViewController () <WKCustomViewDismissalProtocol>
