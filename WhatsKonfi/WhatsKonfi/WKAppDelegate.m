@@ -21,10 +21,6 @@
     
     [Parse setApplicationId:@"KEdRi4konpCgWzlyAnru3W6lnjfPA9D7ht3ULFwD"
                   clientKey:@"aMzvAvDBOMSdlJwEmLTeBwYXMpClod22E3rAvhjy"];
-//
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
     
     return YES;
 }
